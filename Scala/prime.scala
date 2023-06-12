@@ -11,14 +11,20 @@ scala-cli prime.scala -- 101
 
 object PrimeApp:
 
-  @main def prime(n: Int) =
+  @main
+  def prime(n: Int) =
     println(n)
     val result = if isPrime(n) then "Prime" else "Not prime"
     println(result)
 
-  def isPrime(n: Int): Boolean =
-    val hasFactor = (2 until n).map(i => (n % i) == 0).reduce(_|_)
-    !hasFactor
+  @annotation.tailrec
+  def isPrime(n: Int, from: Int = 2): Boolean =
+    if (from*from > n)
+      true
+    else
+      n % from match
+      case 0 => false
+      case _ => isPrime(n, from + 1)
 
 // eof
 

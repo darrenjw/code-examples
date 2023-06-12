@@ -9,24 +9,22 @@ scala-cli factor.scala -- 99
 
 */
 
-import scala.util.boundary, boundary.break
 
 object FactorApp:
 
-  @main def factorMain(n: Int) =
+  @main
+  def factorMain(n: Int) =
     print(s"$n = ")
-    factor(n)
+    println(factor(n).mkString(" x "))
 
-  def factor(n: Int): Unit =
-    boundary:
-      for
-        i <- 2 until n
-      do
-        if (n % i == 0)
-          print(s"$i x ")
-          factor(n / i)
-          break()
-      println(n)
+  def factor(n: Int, from: Int = 2): List[Int] =
+    if (from*from > n)
+      List(n)
+    else
+      n % from match
+      case 0 => from :: factor(n / from, from)
+      case _ =>
+        factor(n, from + 1)
 
 // eof
 
