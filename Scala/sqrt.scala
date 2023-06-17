@@ -14,7 +14,7 @@ object SqrtApp:
 
   @main
   def sqrtMain(x: Double) =
-    print(s"$x = ")
+    print(s"sqrt($x) = ")
     println(mySqrt(x))
 
   def mySqrt(x: Double): Double =

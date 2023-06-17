@@ -9,9 +9,10 @@ The easiest way to install all necessary Scala tools on your system is by using 
 In roughly increasing order of complexity:
 
 * [e.scala](e.scala) - compute *e* from its series expansion *(for loop)*
-* [prime.scala](prime.scala) - test if a given number is prime *(recursive function)*
+* [prime.scala](prime.scala) - test if a given number is prime *(tail-recursive function)*
 * [factor.scala](factor.scala) - compute a prime factorisation *(lists)*
-* [sqrt.scala](sqrt.scala) - compute square roots with Newton's method *(nested recursive function)*
+* [sqrt.scala](sqrt.scala) - compute square roots with Newton's method *(nested tail-recursive function)*
+* [sin.scala](sin.scala) - compute square roots with Newton's method *(non-tail-recursive function)*
 
 
 
