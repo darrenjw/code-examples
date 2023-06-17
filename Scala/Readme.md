@@ -11,6 +11,9 @@ In roughly increasing order of complexity:
 * [e.scala](e.scala) - compute *e* from its series expansion *(for loop)*
 * [prime.scala](prime.scala) - test if a given number is prime *(recursive function)*
 * [factor.scala](factor.scala) - compute a prime factorisation *(lists)*
+* [sqrt.scala](sqrt.scala) - compute square roots with Newton's method *(nested recursive function)*
+
+
 
 ## Some links
 
