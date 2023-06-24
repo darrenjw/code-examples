@@ -15,6 +15,7 @@ In roughly increasing order of complexity:
 * [sin.scala](sin.scala) - compute square roots with Newton's method *(non-tail-recursive function)*
 * [stats.scala](stats.scala) - compute mean and sd of some numbers *(read lines from stdin)*
 * [statse.scala](statse.scala) - compute mean and sd of some numbers *(extension methods)*
+* [statsb.scala](statse.scala) - compute mean and sd using Breeze *(Breeze scientific library)*
 
 
 
