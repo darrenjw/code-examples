@@ -16,7 +16,7 @@ In roughly increasing order of complexity:
 * [stats.scala](stats.scala) - compute mean and sd of some numbers *(read lines from stdin)*
 * [statse.scala](statse.scala) - compute mean and sd of some numbers *(extension methods)*
 * [statsb.scala](statsb.scala) - compute mean and sd using Breeze *(Breeze scientific library)*
-
+* [canvas1.scala](canvas1.scala) - minimal image/canvas app *(case classes, writing a file)*
 
 
 ## Some links
