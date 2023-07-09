@@ -16,12 +16,16 @@ case class Colour(r: Int, g: Int, b: Int)
 case class Loc(x: Int, y: Int)
 
 case class Image[T](w: Int, h: Int, data: Vector[T]):
+
   def apply(l: Loc): T = data(l.x*h+l.y)
+
   def map[S](f: T => S): Image[S] = Image(w, h, data map f)
+
   def updated(l: Loc, value: T): Image[T] =
     if ((l.x >= 0)&(l.y >= 0)&(l.x < w)&(l.y < h))
       Image(w, h, data.updated(l.x*h+l.y, value))
     else this
+
   def line(l0: Loc, l1: Loc, c: T): Image[T] =
     val xd = math.abs(l1.x - l0.x)
     val yd = math.abs(l1.y - l0.y)
@@ -34,10 +38,13 @@ case class Image[T](w: Int, h: Int, data: Vector[T]):
 
 
 case object Image:
+
   def blank[T](w: Int, h: Int, c: T): Image[T] =
     Image(w, h, Vector.fill[T](w*h)(c))
+
   def blank(w: Int, h: Int): Image[Colour] =
     blank(w, h, Colour(255, 255, 255))
+
   def saveAsPPM(im: Image[Colour], fileName: String): Unit =
     val fs = new java.io.FileWriter(fileName)
     fs.write(s"P3 ${im.w} ${im.h} 255\n")
@@ -48,6 +55,9 @@ case object Image:
       )
     )
     fs.close()
+
+
+
 
 object CanvasApp:
 
