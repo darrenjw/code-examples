@@ -36,6 +36,24 @@ case class Image[T](w: Int, h: Int, data: Vector[T]):
     val ls = (x zip y) map (p => Loc(p._1, p._2))
     ls.foldLeft(this)((im, li) => im.updated(li, c))
 
+  def tri(l0: Loc, l1: Loc, l2: Loc, c: T): Image[T] =
+    val sorted = List(l0, l1, l2).sortWith(_.y < _.y)
+    val iTop = 0 until (sorted(1).y - sorted(0).y)
+    val linesTop = iTop.map(i => (sorted(0).y + i,
+      sorted(2).x.toDouble*i/(sorted(2).y-sorted(0).y) +
+        sorted(0).x.toDouble*(sorted(2).y-sorted(0).y-i)/(sorted(2).y-sorted(0).y),
+      sorted(1).x.toDouble*i/(sorted(1).y-sorted(0).y) +
+        sorted(0).x.toDouble*(sorted(1).y-sorted(0).y-i)/(sorted(1).y-sorted(0).y)))
+    val iBot = 0 until (sorted(2).y - sorted(1).y)
+    val linesBot = iBot.map(i => (sorted(1).y + i,
+      sorted(2).x.toDouble*(sorted(1).y - sorted(0).y + i)/(sorted(2).y-sorted(0).y) +
+        sorted(0).x.toDouble*(sorted(2).y-sorted(1).y-i)/(sorted(2).y-sorted(0).y),
+      sorted(2).x.toDouble*i/(sorted(2).y-sorted(1).y) +
+        sorted(1).x.toDouble*(sorted(2).y-sorted(1).y-i)/(sorted(2).y-sorted(1).y)))
+    val lines = linesTop ++ linesBot
+    lines.foldLeft(this)((im, yxX) =>
+      im.line(Loc(yxX._2.toInt, yxX._1), Loc(yxX._3.toInt, yxX._1), c))
+
 
 case object Image:
 
@@ -74,7 +92,10 @@ object CanvasApp:
       line(Loc(0, 0), Loc(100, 50), black).
       line(Loc(0, 0), Loc(50, 100), red).
       line(Loc(149, 50), Loc(50 , 50), green).
-      updated(Loc(40, 40), blue)
+      updated(Loc(40, 40), blue).
+      tri(Loc(100, 100), Loc(150, 100), Loc(125, 50), green).
+      tri(Loc(50, 0), Loc(20, 30), Loc(100, 60), red).
+      tri(Loc(100, 0), Loc(150, 50), Loc(50, 80), black)
     Image.saveAsPPM(im1, "test2.ppm")
     println("Goodbye")
 
