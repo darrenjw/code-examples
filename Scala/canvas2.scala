@@ -6,7 +6,7 @@ canvas2.scala
 Initial image/canvas app with lines and filled triangles
 Creates a simple PPM
 
-scala-cli canvas1.scala
+scala-cli canvas2.scala
 
 */
 
@@ -17,13 +17,13 @@ case class Loc(x: Int, y: Int)
 
 case class Image[T](w: Int, h: Int, data: Vector[T]):
 
-  def apply(l: Loc): T = data(l.x*h+l.y)
+  def apply(l: Loc): T = data(l.x*h + l.y)
 
   def map[S](f: T => S): Image[S] = Image(w, h, data map f)
 
   def updated(l: Loc, value: T): Image[T] =
     if ((l.x >= 0)&(l.y >= 0)&(l.x < w)&(l.y < h))
-      Image(w, h, data.updated(l.x*h+l.y, value))
+      Image(w, h, data.updated(l.x*h + l.y, value))
     else this
 
   def line(l0: Loc, l1: Loc, c: T): Image[T] =
