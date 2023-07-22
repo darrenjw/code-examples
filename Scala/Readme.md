@@ -21,6 +21,7 @@ In roughly increasing order of complexity:
 * [canvas3.scala](canvas3.scala) - minimal image/canvas app (Sierpinski triangles) *(parametrised extension)*
 * [canvas4.scala](canvas4.scala) - minimal image/canvas app (circles and thick lines)
 * [canvas5.scala](canvas5.scala) - minimal image/canvas app (fractal fern)
+* [canvas6.scala](canvas6.scala) - minimal image/canvas app (Mandelbrot set) *(complex numbers)*
 
 
 ## Some links
