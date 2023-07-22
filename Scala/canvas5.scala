@@ -126,14 +126,14 @@ object CanvasApp:
 
   extension [T] (im: Image[T])
     def fern(lev: Int, x0: Double, y0: Double, x1: Double, y1: Double, squ: Double, c: T): Image[T] =
-      val tc = 0.05; // thickness coef
-      val hs = 0.6; // horizontal shrink factor
-      val sq = 0.7; // horizontal squish factor
-      val vs = 0.9; // vertical shrink factor
-      val rbf = 0.7; // right branch fraction
-      val vr = 0.03; // vertical rotation angle (radians)
-      val l = math.sqrt((x1-x0)*(x1-x0) + (y1-y0)*(y1-y0));
-      val th = tc*l;
+      val tc = 0.05 // thickness coef
+      val hs = 0.6 // horizontal shrink factor
+      val sq = 0.7 // horizontal squish factor
+      val vs = 0.9 // vertical shrink factor
+      val rbf = 0.7 // right branch fraction
+      val vr = 0.03 // vertical rotation angle (radians)
+      val l = math.sqrt((x1-x0)*(x1-x0) + (y1-y0)*(y1-y0))
+      val th = tc*l
       val im0 = im.lineThick(Loc(math.round(x0).toInt, math.round(y0).toInt),
         Loc(math.round(x1).toInt, math.round(y1).toInt), th, c)
       if (lev == 0)
@@ -159,7 +159,7 @@ object CanvasApp:
   @main def main() =
     println("Hello")
     val im0 = Image.blank(800, 900).
-      fern(17, 400, 870, 400, 770, 0.7, darkGreen)
+      fern(15, 400, 870, 400, 770, 0.7, darkGreen)
 
     Image.saveAsPPM(im0, "test5.ppm")
     println("Goodbye")
