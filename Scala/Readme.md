@@ -19,6 +19,7 @@ In roughly increasing order of complexity:
 * [canvas1.scala](canvas1.scala) - minimal image/canvas app (set pixels) *(case classes, writing a file)*
 * [canvas2.scala](canvas2.scala) - minimal image/canvas app (lines and triangles) *(folds)*
 * [canvas3.scala](canvas3.scala) - minimal image/canvas app (Sierpinski triangles) *(parametrised extension)*
+* [canvas4.scala](canvas4.scala) - minimal image/canvas app (Circles and thick lines)
 
 
 ## Some links
