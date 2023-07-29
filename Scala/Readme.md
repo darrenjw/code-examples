@@ -24,6 +24,7 @@ In roughly increasing order of complexity:
 * [canvas6.scala](canvas6.scala) - minimal image/canvas app (Mandelbrot set) *(complex numbers from Spire)*
 * [canvas7.scala](canvas7.scala) - minimal image/canvas app (Lorenz attractor with Euler integration) *(LazyLists)*
 * [canvas8.scala](canvas8.scala) - minimal image/canvas app (save Mandelbrot as PNG) *(BufferedImage)*
+* [mand.scala](mand.scala) - draw a Mandelbrot set directly on a BufferedImage
 
 
 ## Some links
