@@ -35,4 +35,6 @@ In roughly increasing order of complexity:
 * [typelevel](https://typelevel.org/)
     * [spire](https://typelevel.org/spire/)
 * [breeze](https://github.com/scalanlp/breeze)
+* [scala-swing](https://index.scala-lang.org/scala/scala-swing)
+
 
