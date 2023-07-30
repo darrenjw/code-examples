@@ -26,6 +26,7 @@ In roughly increasing order of complexity:
 * [canvas8.scala](canvas8.scala) - minimal image/canvas app (save Mandelbrot as PNG) *(BufferedImage)*
 * [mand.scala](mand.scala) - draw a Mandelbrot set directly on a BufferedImage *(WriteableRaster)*
 * [sierp.scala](sierp.scala) - draw a Sierpinski directly on a BufferedImage *(Graphics2D)*
+* [lorenz.scala](lorenz.scala) - integrate the Lorenz system with Breeze and plot in a window on the console *(breeze-viz)*
 * [window.scala](window.scala) - draw a Mandelbrot set in a window on the console *(Swing)*
 * [agglom](./agglom/) - simple multi-file application to animate an agglomeration process *(sbt project)*
 
