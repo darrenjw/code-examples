@@ -27,7 +27,7 @@ object Logic:
           case 3 => go(x, math.min(h-1,y+1))
     val (x, y) = go(x0, y0)
     wr.setSample(x, y, 0,  0) // dark green pixel
-    wr.setSample(x, y, 1, 20) // dark green pixel
+    wr.setSample(x, y, 1, 40) // dark green pixel
     wr.setSample(x, y, 2,  0) // dark green pixel
 
   def isAdjacent(wr: WritableRaster, x: Int, y: Int): Boolean =
