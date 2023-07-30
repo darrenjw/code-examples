@@ -27,7 +27,7 @@ In roughly increasing order of complexity:
 * [mand.scala](mand.scala) - draw a Mandelbrot set directly on a BufferedImage *(WriteableRaster)*
 * [sierp.scala](sierp.scala) - draw a Sierpinski directly on a BufferedImage *(Graphics2D)*
 * [window.scala](window.scala) - draw a Mandelbrot set in a window on the console *(Swing)*
-
+* [agglom](./agglom/) - simple multi-file application to animate an agglomeration process *(sbt project)*
 
 ## Some links
 
