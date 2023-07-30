@@ -5,6 +5,7 @@
 canvas6.scala
 
 Simple image/canvas app drawing a Mandelbrot set
+https://en.wikipedia.org/wiki/Mandelbrot_set
 Creates a simple PPM
 
 scala-cli canvas6.scala

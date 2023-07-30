@@ -5,6 +5,7 @@ canvas1.scala
 
 Initial image/canvas app with minimal features
 Creates a simple PPM
+https://en.wikipedia.org/wiki/Netpbm
 
 scala-cli canvas1.scala
 

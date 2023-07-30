@@ -3,6 +3,7 @@
 /*
 sqrt.scala
 Compute square roots with Newton's method
+https://en.wikipedia.org/wiki/Newton%27s_method
 
 Run with:
 scala-cli sqrt.scala -- 2.0

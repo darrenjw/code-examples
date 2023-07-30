@@ -4,6 +4,8 @@
 canvas3.scala
 
 Initial image/canvas app with sierpinski triangles
+https://en.wikipedia.org/wiki/Sierpi%C5%84ski_triangle
+
 Creates a simple PPM
 
 scala-cli canvas3.scala
