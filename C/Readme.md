@@ -27,6 +27,7 @@ In roughly increasing order of complexity:
 
 ## Some links
 
+* [Learn C](https://www.learn-c.org/)
 * [gcc](https://gcc.gnu.org/)
 * [clang](https://clang.llvm.org/)
 * [GNU](https://directory.fsf.org/wiki/GNU)

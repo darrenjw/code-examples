@@ -5,6 +5,16 @@ Compute e via its series expansion:
 
 e = 1/0! + 1/1! + 1/2! + 1/3! + ...
 
+Compile with:
+gcc e.c
+or
+gcc e.c -o e
+
+Run with:
+./a.out
+or
+./e
+
 */
 
 #include <stdlib.h>
