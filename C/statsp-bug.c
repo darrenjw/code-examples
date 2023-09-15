@@ -45,7 +45,8 @@ info args
 will give the current value of variables on the call stack at 
 the time of the crash
 print i
-will give the current value of the counter i, which hints at the problem...
+print s
+will give the current value of those variables, which hints at the problem...
 Ctrl-D to exit.
 *************************************************************
 
