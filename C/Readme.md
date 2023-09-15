@@ -9,6 +9,7 @@ In roughly increasing order of complexity:
 * [sin.c](sin.c) - compute the sin of a number (in radians) using trig *(recursive function)*
 * [stats.c](stats.c) - compute mean and std-dev of numbers *(reading data from stdin, arrays)*
 * [statsp.c](statsp.c) - compute mean and std-dev of numbers *(use pointers rather than explicit array indexing)*
+* [statsp-bug.c](statsp-bug.c) - previous example with a bug deliberately introduced - read the code comments *(using the debugger, gdb)*
 * [statsv.c](statsv.c) - compute mean and std-dev of numbers *(use a typedef'd struct as a vector type)*
 * [statsg.c](statsg.c) - compute mean and std-dev of numbers *(using the GSL)*
 * [canvas1.c](canvas1.c) - first attempt at a canvas drawing app *(writing a file)*
