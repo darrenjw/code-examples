@@ -39,7 +39,7 @@ Note that the debugger immediately gives you the line where
 the crash occurred, which is already helpful information.
 Typing:
 backtrace
-will git a full back-trace for the call stack. Not so helpful here,
+will give a full back-trace for the call stack. Not so helpful here,
 but typically is extremely useful.
 info args
 will give the current value of variables on the call stack at 
