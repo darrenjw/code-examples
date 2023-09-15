@@ -6,8 +6,8 @@ Compute the mean and standard deviation of some numbers
 The number of numbers should be provided as a command line argument
 
 The actual numbers should be entered one per line or piped in
-
-eg. ./statsp-bug 5 < fiveNumbers.txt
+eg. 
+./statsp-bug 5 < fiveNumbers.txt
 
 Requires math library: compile with "-lm". eg.
 gcc statsp-bug.c -lm -o statsp-bug
@@ -49,6 +49,10 @@ will give the current value of the counter i, which hints at the problem...
 Ctrl-D to exit.
 *************************************************************
 
+If you are struggling to find the bug, do:
+diff statsp.c statsp-bug.c 
+
+from the command line to see the line of code that was changed.
 
 */
 
