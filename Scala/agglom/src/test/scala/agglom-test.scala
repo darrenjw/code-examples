@@ -10,5 +10,3 @@ class SetSpec extends AnyFlatSpec:
     val m = p.mean
     assert(math.abs(m - 10.0) < 0.000001)
   }
-
-

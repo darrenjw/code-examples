@@ -10,7 +10,7 @@ then render in a window on the console
 
 scala-cli window.scala
 
-*/
+ */
 
 import spire.*
 import spire.math.*
@@ -24,30 +24,34 @@ object MandelApp extends SimpleSwingApplication:
 
   def level(c: Complex[Double], maxIts: Int): Int =
     @annotation.tailrec
-    def go(z: Complex[Double], its: Int): Int = 
-      if (its >= maxIts)
-        -1
+    def go(z: Complex[Double], its: Int): Int =
+      if (its >= maxIts) -1
       else
-        val zn = z*z + c
+        val zn = z * z + c
         if (zn.abs > 2.0)
           its
         else
-          go(zn, its+1)
+          go(zn, its + 1)
     go(Complex(0.0, 0.0), 1)
 
-  def mand(w: Int, h: Int, tl: Complex[Double], iRange: Double,
-      maxIts: Int): BufferedImage =
-    val res = iRange.toDouble/h
+  def mand(
+      w: Int,
+      h: Int,
+      tl: Complex[Double],
+      iRange: Double,
+      maxIts: Int
+  ): BufferedImage =
+    val res = iRange.toDouble / h
     val canvas = new BufferedImage(w, h, BufferedImage.TYPE_INT_RGB)
     val wr = canvas.getRaster
     for (x <- 0 until w)
       for (y <- 0 until h)
-        val c = tl + Complex(x*res, -y*res)
+        val c = tl + Complex(x * res, -y * res)
         val l = level(c, maxIts)
         if (l == -1)
           wr.setSample(x, y, 2, 20)
         else
-          wr.setSample(x, y, 0, 255*l/maxIts)
+          wr.setSample(x, y, 0, 255 * l / maxIts)
     canvas
 
   def top = new MainFrame {
@@ -72,6 +76,4 @@ object MandelApp extends SimpleSwingApplication:
       ip.preferredSize = new Dimension(w, h)
       ip
 
-
 // eof
-

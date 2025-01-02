@@ -9,20 +9,19 @@ https://en.wikipedia.org/wiki/Netpbm
 
 scala-cli canvas1.scala
 
-*/
-
+ */
 
 case class Colour(r: Int, g: Int, b: Int)
 
 case class Image[T](w: Int, h: Int, data: Vector[T]):
-  def apply(x: Int, y: Int): T = data(x*h+y)
+  def apply(x: Int, y: Int): T = data(x * h + y)
   def map[S](f: T => S): Image[S] = Image(w, h, data map f)
   def updated(x: Int, y: Int, value: T): Image[T] =
-    Image(w, h, data.updated(x*h+y, value))
+    Image(w, h, data.updated(x * h + y, value))
 
 case object Image:
   def blank(w: Int, h: Int): Image[Colour] =
-    Image(w, h, Vector.fill[Colour](w*h)(Colour(255, 255, 255)))
+    Image(w, h, Vector.fill[Colour](w * h)(Colour(255, 255, 255)))
   def saveAsPPM(im: Image[Colour], fileName: String): Unit =
     val fs = new java.io.FileWriter(fileName)
     fs.write(s"P3 ${im.w} ${im.h} 255\n")
@@ -45,11 +44,8 @@ object CanvasApp:
   @main def main() =
     println("Hello")
     val im = Image.blank(10, 8)
-    val im1 = im.
-      updated(3, 2, black).
-      updated(4, 3, red)
+    val im1 = im.updated(3, 2, black).updated(4, 3, red)
     Image.saveAsPPM(im1, "test1.ppm")
     println("Goodbye")
 
 // eof
-

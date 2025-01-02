@@ -7,8 +7,7 @@ Compute prime factorisation
 Run with:
 scala-cli factor.scala -- 99
 
-*/
-
+ */
 
 object FactorApp:
 
@@ -18,13 +17,12 @@ object FactorApp:
     println(factor(n).mkString(" x "))
 
   def factor(n: Int, from: Int = 2): List[Int] =
-    if (from*from > n)
+    if (from * from > n)
       List(n)
     else
       n % from match
-      case 0 => from :: factor(n / from, from)
-      case _ =>
-        factor(n, from + 1)
+        case 0 => from :: factor(n / from, from)
+        case _ =>
+          factor(n, from + 1)
 
 // eof
-

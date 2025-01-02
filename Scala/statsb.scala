@@ -10,7 +10,7 @@ Using Breeze
 Run with (eg.):
 scala-cli statsb.scala -- 5 < ../C/fiveNumbers.txt
 
-*/
+ */
 
 import scala.io.StdIn.readLine
 import breeze.linalg.*
@@ -27,8 +27,4 @@ object StatsApp:
     println(mv.mean)
     println(math.sqrt(mv.variance))
 
-
-
-
 // eof
-

@@ -11,8 +11,7 @@ and the fact that for small enough x, sin(x) ~= x.
 Run with:
 scala-cli sin.scala -- 1.0
 
-*/
-
+ */
 
 object SqrtApp:
 
@@ -22,12 +21,9 @@ object SqrtApp:
     println(mySin(x))
 
   def mySin(x: Double): Double =
-    if math.abs(x) < 1.0e-5 then
-      x
+    if math.abs(x) < 1.0e-5 then x
     else
-      val sx3 = mySin(x/3)
-      3*sx3 - 4*sx3*sx3*sx3
-
+      val sx3 = mySin(x / 3)
+      3 * sx3 - 4 * sx3 * sx3 * sx3
 
 // eof
-
